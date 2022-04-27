@@ -22,4 +22,13 @@ public class AgendamentoEmailDAO {
 		
 		em.persist(agendamentoEmail);
 	}
+	
+	public List<AgendamentoEmail> listarNaoAgendado(){
+		return em.createQuery("SELECT ae FROM AgendamentoEmail ae WHERE agendado = false",
+				AgendamentoEmail.class).getResultList();
+	}
+	
+	public void alterar(AgendamentoEmail ae) {
+		em.merge(ae);
+	}
 }
