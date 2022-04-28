@@ -52,7 +52,7 @@ public class AgendamentoEmailServico {
 	 */
 	public void enviar(AgendamentoEmail ae) {
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(7000);
 			LOGGER.info("E-mail " + ae.getEmail() + " foi enviado.");
 		} catch (Exception e) {
 			LOGGER.warning(e.getMessage());
